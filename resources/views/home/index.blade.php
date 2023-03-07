@@ -65,3 +65,7 @@
         </div>
     </div>
 @endsection
+
+@push('footer')
+    @include('partials.footer')
+@endpush

@@ -24,7 +24,7 @@
 
     @yield('content')
 
-    @include('partials.footer')
+    @stack('footer')
     {{-- Bootsrap js --}}
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     @stack('js')
