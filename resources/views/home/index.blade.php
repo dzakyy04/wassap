@@ -1,13 +1,7 @@
 @extends('layouts.main')
 
 @push('css')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <style>
-        .sticky-top {
-            height: 25vh;
-            top: 5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/homee.css') }}">
 @endpush
 
 @section('content')
@@ -30,12 +24,12 @@
         <img src="{{ asset('img/shape2.svg') }}" class="position-absolute bottom-0 end-0">
     </div>
 
-    <div class="container">
+    <div class="two container">
         <div class="row mt-5">
             <div class="col-md-8">
                 <h2 class="text-center" id="news-list">Berita Terbaru</h2>
-                @foreach (range(1, 5) as $item)
-                    <div class="news d-flex justify-content-start align-items-center mt-3">
+                @foreach (range(1, 10) as $item)
+                    <div class="news d-flex align-items-center mt-4">
                         <div class="news-content col-md-8">
                             <div class="author d-flex align-items-center">
                                 <img src="https://source.unsplash.com/30x30?profile" class="rounded-circle img-fluid">
@@ -44,22 +38,29 @@
 
                             <div class="news-desc mt-2">
                                 <h4 class="poppins fw-bold">Apa itu remastering Linux?</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero nisi tempora
+                                <p class="m-0 p-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero
+                                    nisi tempora
                                     ullam beatae corporis iusto animi optio tempore deserunt.</p>
-                                <p class="text-secondary">3 Maret ~ 24 Menit yang lalu ~ Personal</p>
+                                <small class="text-secondary">3 Maret ~ 24 Menit yang lalu ~ Personal</small>
                             </div>
                         </div>
-                        <div class="news-image col-md-4">
-                            <img src="https://source.unsplash.com/200x150?profile">
+                        <div class="news-image col-md-4 ms-2">
+                            <img src="https://source.unsplash.com/300x200?{{ $loop->iteration }}" class="img-fluid">
                         </div>
                     </div>
+
+                    <hr>
                 @endforeach
             </div>
 
-            <div class="categories col-4 sticky-top">
+            <div class="categories col-4 sticky-top text-center ps-3">
                 <h5>Temukan lebih banyak hal yang penting bagi Anda</h5>
-                @foreach (range(1, 10) as $item)
-                    <a type="button" class="btn btn-outline-warning mt-3">Warning</a>
+                @foreach (range(1, 11) as $item)
+                    @if ($loop->iteration % 2 == 0)
+                    <a type ="button" class="btn btn-outline-warning mt-3">Programming</a>
+                    @else
+                    <a type ="button" class="btn btn-outline-warning mt-3">Web</a>
+                    @endif
                 @endforeach
             </div>
         </div>

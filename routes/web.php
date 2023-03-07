@@ -33,3 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Logout Route
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
+
+Route::get('/about', function() {
+   return view('about.index'); 
+});
