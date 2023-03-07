@@ -65,7 +65,7 @@
                     {{-- Button --}}
                     <button class="w-100 btn btn-lg btn-warning mt-3" type="submit">Daftar</button>
                 </form>
-                <small class="d-block text-center mt-3">Sudah punya akun? <a href="{{ route('login') }}" class="text-warning">Login
+                <small class="d-block text-center mt-3">Sudah punya akun? <a href="{{ route('login') }}" class="text-warning text-decoration-none">Login
                         sekarang!</a></small>
 
             </div>
