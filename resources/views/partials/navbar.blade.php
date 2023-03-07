@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">WASSAP</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -8,7 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto ">
                 <li class="nav-item text-white">
-                    <a class="nav-link {{ Request::segment(1) == '' ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+                    <a class="nav-link {{ Request::segment(1) == '' ? 'active' : '' }}" aria-current="page"
+                        href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::segment(1) == 'news' ? 'active' : '' }}" href="{{ route('news.index') }}">Berita</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::segment(1) == 'about' ? 'active' : '' }}" href="#">About</a>

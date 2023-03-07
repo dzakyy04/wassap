@@ -35,14 +35,13 @@ img.position-absolute {
     transition: .3s;
 }
 
-
 .sticky-top {
     height: 25vh;
     top: 5rem;
 }
 
 @media screen and (max-width: 992px) {
-    .two .row {
+    .container .row {
         flex-direction: column-reverse;
     }
 
@@ -110,5 +109,4 @@ img.position-absolute {
     .news-image.col-md-4 {
         width: 35%;
     }
-
 }
