@@ -1,0 +1,78 @@
+.landing-page {
+    height: 100vh;
+    background-image: url('/img/bgpolos.svg');
+}
+
+.landing-page .left-side {
+    width: 45%;
+}
+
+.landing-page .right-side {
+    width: 50%;
+}
+
+.landing-page .right-side img {
+    width: 500px;
+}
+
+img.position-absolute {
+    width: 500px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: .3s;
+}
+
+.button .btn-warning {
+    background-color: var(--yellow);
+}
+
+.button .btn-warning:hover, .btn-warning:focus {
+    background-color: var(--yellow) !important;
+    filter: brightness(1.1);
+    transition: .3s;
+}
+
+.news {
+    height: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing-page .right-side img {
+        width: 300px;
+    }
+
+    img.position-absolute {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .landing-page .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .landing-page .left-side {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .landing-page .right-side {
+        width: 100%;
+    }
+
+    .button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button .btn-warning {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        width: 80vw;
+    }
+}
