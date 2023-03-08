@@ -5,6 +5,11 @@
 @endpush
 
 @section('content')
+    @if (session('success'))
+        <div class="alert alert-success w-auto position-fixed start-50 translate-middle-x z-3 px-3" style="top: 80px">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="landing-page d-flex align-items-center">
         <img src="{{ asset('img/shape1.svg') }}" class="position-absolute top-0 start-0">
         <div class="container d-flex justify-content-between position-relative z-1">
@@ -40,7 +45,8 @@
                     {{-- Button --}}
                     <button class="w-100 btn btn-lg btn-warning mt-3" type="submit">Login</button>
                 </form>
-                <small class="d-block text-center mt-3">Belum punya akun? <a href="{{ route('register') }}" class="text-warning text-decoration-none">Daftar
+                <small class="d-block text-center mt-3">Belum punya akun? <a href="{{ route('register') }}"
+                        class="text-warning text-decoration-none">Daftar
                         sekarang!</a></small>
 
             </div>
@@ -51,3 +57,11 @@
         <img src="{{ asset('img/shape2.svg') }}" class="position-absolute bottom-0 end-0">
     </div>
 @endsection
+
+@push('js')
+    <script>
+        setTimeout(function() {
+            $('.alert').alert('close');
+        }, 3000);
+    </script>
+@endpush

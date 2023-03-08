@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    {{-- Swiper CSS --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    {{-- Swiper JS --}}
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     {{-- Main css --}}
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     {{-- CSS Include --}}
@@ -27,6 +23,8 @@
     @yield('content')
 
     @stack('footer')
+    {{-- Jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     {{-- Bootsrap js --}}
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     @stack('js')

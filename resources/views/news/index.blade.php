@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-8">
-                <h2 class="text-center" id="news-list">Daftar Berita</h2>
+                <h2 class="text-center poppins fw-bold" id="news-list">Daftar Berita</h2>
                 @foreach ($news as $news)
                     <div class="news d-flex align-items-center mt-4">
                         <div class="news-content col-md-8">
@@ -23,7 +23,7 @@
                                 <small class="text-secondary">{{ $news->created_at->locale('id')->diffForHumans() }} - {{ date('j F Y H:i', strtotime($news->created_at)); }}</small>
                             </a>
                         </div>
-                        <a href="" class="news-image col-md-4 ms-2">
+                        <a href="{{ route('news.show', $news->slug ) }}" class="news-image col-md-4 ms-2">
                             <img src="https://source.unsplash.com/300x200?{{ $loop->iteration }}" class="img-fluid">
                         </a>
                     </div>
